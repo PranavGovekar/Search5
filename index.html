@@ -101,6 +101,15 @@ const address = ["", "NAGPUR", "DAROGHA MASJID KE PASS WARIS PURA KAMPTEE", "512
                 var Table = document.getElementById("testBody");
                 Table.innerHTML = "";
                 const table = document.getElementById("testBody");
+                if (items.length == 0) {
+                    let row = table.insertRow();
+                    let sr = row.insertCell(0);
+                    sr.innerHTML = "#";
+                    let name = row.insertCell(1);
+                    name.innerHTML = "No results found!";
+                    let polling = row.insertCell(2);
+                    polling.innerHTML = "#";
+                }
                 items.forEach(item => {
                     let row = table.insertRow();
                     let sr = row.insertCell(0);
